@@ -3,13 +3,12 @@ using namespace std;
 
 int main()
 {
-    float min;
+    float min = 0;
     int imin = 0;
-    float minKey = 0;
-    float max;
+    float max = 0;
     int imax = 0;
-    float maxKey = 0;
     int flag = 0;
+
     float arr[15];
 
     for (int i = 0; i < 15; i++)
@@ -30,32 +29,16 @@ int main()
             imin = i;
         }
 
-        if (arr[i] > max)
+        else if (arr[i] > max)
         {
             max = arr[i];
             imax = i;
         }
     }
 
-    for (int j = 0; j < 15; j++)
+    if (imin < imax)
     {
-        cout << arr[j] << " ";
-    }
-
-    cout << endl;
-
-    minKey = arr[0];
-    maxKey = arr[14];
-
-    arr[0] = min;
-    arr[14] = max;
-
-    arr[imin] = minKey;
-    arr[imax] = maxKey;
-
-    for (int j = 0; j < 15; j++)
-    {
-        cout << arr[j] << " ";
+        cout << "Произведение максимального и минимальнго: " << min * max;
     }
 
     return 0;

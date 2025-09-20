@@ -3,16 +3,14 @@ using namespace std;
 
 int main()
 {
-    float min;
+    float arr[5];
+    float min = 0;
     int imin = 0;
-    float minKey = 0;
-    float max;
+    float max = 0;
     int imax = 0;
-    float maxKey = 0;
     int flag = 0;
-    float arr[15];
 
-    for (int i = 0; i < 15; i++)
+    for (int i = 0; i < 5; i++)
     {
         cout << "Введите число: ";
         cin >> arr[i];
@@ -23,39 +21,25 @@ int main()
             max = arr[i];
             flag++;
         }
-
-        if (arr[i] < min)
+        else if (arr[i] < min)
         {
             min = arr[i];
             imin = i;
         }
-
-        if (arr[i] > max)
+        else if (arr[i] > max)
         {
             max = arr[i];
             imax = i;
         }
     }
 
-    for (int j = 0; j < 15; j++)
+    if (imin == 1 && imax == 0)
     {
-        cout << arr[j] << " ";
-    }
-
-    cout << endl;
-
-    minKey = arr[0];
-    maxKey = arr[14];
-
-    arr[0] = min;
-    arr[14] = max;
-
-    arr[imin] = minKey;
-    arr[imax] = maxKey;
-
-    for (int j = 0; j < 15; j++)
-    {
-        cout << arr[j] << " ";
+        for (int j = 0; j < 5; j++)
+        {
+            arr[j] = arr[j] / 2;
+            cout << arr[j] << " ";
+        }
     }
 
     return 0;
