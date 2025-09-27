@@ -36,5 +36,11 @@ int main() {
 
     insertionSort(arr);
 
+    for (int i = 0; i < 10; i++)
+    {
+		cout << "Введите число: ";
+		cin >> arr[i];
+	}
+
 	return 0;
 }
