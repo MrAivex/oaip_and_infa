@@ -3,54 +3,14 @@ using namespace std;
 
 int main()
 {
-    int arr[5];
-    int min = 0;
-    int max = 0;
-    int imin = 0;
-    int flag = 0;
+    int n = 0;
 
-    for (int i = 0; i < 15; i++)
+    cout << "Введите n ";
+    cin >> n;
+
+    for (int i = 1; i <= n; i++)
     {
-        cout << "Введите число: ";
-        cin >> arr[i];
-
-        if (flag == 0)
-        {
-            max = arr[i];
-            min = arr[i];
-            flag++;
-        }
-
-        else if (arr[i] < min)
-        {
-            min = arr[i];
-            imin = i;
-        }
-
-        else if (arr[i] > max)
-        {
-            max = arr[i];
-        }
-    }
-
-    for (int i = 0; i < 15; i++)
-    {
-        cout << arr[i] << " ";
-    }
-
-    cout << endl;
-
-    if (min == 0 || max == 0)
-    {
-        for (int i = 0; i < imin; i++)
-        {
-            arr[i] = 0;
-        }
-    }
-
-    for (int i = 0; i < 15; i++)
-    {
-        cout << arr[i] << " ";
+        cout << i * i << endl;
     }
 
     return 0;

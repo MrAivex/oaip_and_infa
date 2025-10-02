@@ -3,43 +3,24 @@ using namespace std;
 
 int main()
 {
-    float arr[15];
-    float min = 0;
-    int imin = 0;
-    float max = 0;
-    int imax = 0;
-    int flag = 0;
+    int age = 0;
 
-    for (int i = 0; i < 15; i++)
+    cout << "Введите возраст ";
+    cin >> age;
+
+    if (age < 18)
     {
-        cout << "Введите число: ";
-        cin >> arr[i];
-
-        if (flag == 0)
-        {
-            min = arr[i];
-            max = arr[i];
-            flag++;
-        }
-        else if (arr[i] < min)
-        {
-            min = arr[i];
-            imin = i;
-        }
-        else if (arr[i] > max)
-        {
-            max = arr[i];
-            imax = i;
-        }
+        cout << "Вам меньше 18 лет";
     }
 
-    if (imin == 1 && imax == 0)
+    if (age >= 18 && age <= 60)
     {
-        for (int j = 0; j < 15; j++)
-        {
-            arr[j] = arr[j] / 2;
-            cout << arr[j] << " ";
-        }
+        cout << "Вам от 18 до 60 лет";
+    }
+
+    if (age > 60)
+    {
+        cout << "Вам больше 60 лет";
     }
 
     return 0;

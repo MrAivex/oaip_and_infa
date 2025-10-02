@@ -3,57 +3,25 @@ using namespace std;
 
 int main()
 {
-    int arr[10];
-    int min = 0;
-    int imin = 0;
-    int max = 0;
-    int imax = 0;
-    int flag = 0;
+    int n = 0;
+    int count = 0;
+    string s = "";
+    string itog = "";
 
-    for (int i = 0; i < 10; i++)
+    cout << "Введите n ";
+    cin >> n;
+
+    for (int i = 0; i < n; i++)
     {
-        cout << "Введите число: ";
-        cin >> arr[i];
-
-        if (flag == 0)
+        cout << "Введите элемент строки ";
+        cin >> s;
+        if (s == "e" || s == "y" || s == "u" || s == "i" || s == "o" || s == "a" || s == "E" || s == "Y" || s == "U" || s == "I" || s == "O" || s == "A")
         {
-            min = arr[i];
-            max = arr[i];
-            flag++;
-        }
-
-        else if (arr[i] < min)
-        {
-            min = arr[i];
-            imin = i;
-        }
-
-        else if (arr[i] > max)
-        {
-            max = arr[i];
-            imax = i;
+            count++;
         }
     }
 
-    for (int i = 0; i < 10; i++)
-    {
-        cout << arr[i] << " ";
-    }
-
-    cout << endl;
-
-    if (imin == 4 && imax == 1)
-    {
-        for (int i = imin + 1; i < 10; i++)
-        {
-            arr[i] = max;
-        }
-    }
-
-    for (int i = 0; i < 10; i++)
-    {
-        cout << arr[i] << " ";
-    }
+    cout << count;
 
     return 0;
 }

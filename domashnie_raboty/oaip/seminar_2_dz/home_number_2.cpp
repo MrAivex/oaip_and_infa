@@ -3,39 +3,16 @@ using namespace std;
 
 int main()
 {
-    int n = 0;
-    int maxNechet;
-    int flag = 0;
-    int countChet = 0;
+    int lenght = 0;
+    int width = 0;
 
-    cout << "Введите n: ";
-    cin >> n;
+    cout << "Введите длину " << endl;
+    cin >> lenght;
 
-    int arr[n];
+    cout << "Введите ширину " << endl;
+    cin >> width;
 
-    for (int i = 0; i < n; i++)
-    {
-        cout << "Введите число: ";
-        cin >> arr[i];
-
-        if (arr[i] % 2 == 0)
-        {
-            countChet++;
-        }
-
-        else if (flag == 0 && arr[i] % 2 != 0)
-        {
-            maxNechet = arr[i];
-            flag++;
-        }
-
-        else if (arr[i] % 2 != 0 && arr[i] > maxNechet)
-        {
-            maxNechet = arr[i];
-        }
-    }
-
-    cout << "Максимальное нечётное: " << maxNechet << ", а количество четных: " << countChet;
+    cout << "Площадь прямоугольника " << lenght * width << endl;
 
     return 0;
 }
