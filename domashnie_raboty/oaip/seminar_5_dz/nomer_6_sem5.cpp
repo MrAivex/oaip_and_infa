@@ -17,12 +17,12 @@ int main()
     }
     else
     {
-        cout << "Не найдено число 7" << endl;
+        cout << "Not found 7" << endl;
     }
 
     sort(vec.begin(), vec.end());
 
-    unique(vec.begin(), vec.end());
+    auto last = unique(vec.begin(), vec.end());
 
     for (int elem : vec)
     {
