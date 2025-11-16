@@ -13,7 +13,7 @@ void count(const char* src, const char* s)
             countS++;
         }
 
-        src++;
+        src++;  
     }
 
     cout << countS << endl;
